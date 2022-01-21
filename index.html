@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>undertale.sav converter</title>
+        <script src="FileSaver.min.js"></script>
+        <script src="jszip.min.js"></script>
+    </head>
+    <body>
+        <header><h1>undertale.sav to save files, and save files to undertale.sav</h1></header>
+        <p>
+            <code>undertale.sav</code> is the save format used by console versions of UNDERTALE or <a href="https://www.moddb.com/mods/undertale-mobile-mod">UNDERTALE Mobile Mod</a>, while "save files" (referring to files such as <code>file0</code>) are used by PC versions of UNDERTALE.
+        </p>
+
+        <h2>undertale.sav to save files</h2>
+        <form id="jsonToSaveForm">
+            <p><label for="saveFile">Select a <code>undertale.sav</code> file</label></p>
+            <input type="file" name="saveFile" id="jsonToSaveFile" required>
+            <input type="submit" name="jsonToSaveConvertButton" value="Convert"> <label for="jsonToSaveConvertButton" id="jsonToSaveProgress"></label>
+        </form>
+
+        <h2>Save files to undertale.sav</h2>
+        <form id="saveToJsonForm">
+            <p><label for="rawFiles">Add multiple save files</label></p>
+            <input type="file" name="rawFiles" id="saveToJsonFiles" multiple required>
+            <input type="submit" name="saveToJsonConvertButton" value="Convert"> <label for="saveToJsonConvertButton" id="saveToJsonProgress"></label>
+        </form>
+
+        <footer>
+            <p>If these actions are completed, a .zip or .sav file download should automatically happen. If not, use a <a href="https://browsehappy.com">better browser</a></p>
+            <p><a href="https://undertale.com">UNDERTALE</a> is by Toby Fox</p>
+            <p>This tool is by <a href="https://github.com/Dobby233Liu">Dobby233Liu</a></p>
+            <p><a href="https://github.com/Dobby233Liu/undertale-sav-converter">Source code</a></p>
+        </footer>
+
+        <script src="index.js"></script>
+    </body>
+</html>
