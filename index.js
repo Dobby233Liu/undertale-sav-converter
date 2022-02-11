@@ -68,7 +68,7 @@ function processFiles(fileList) {
     if (!fileList.hasOwnProperty("default"))
         fileList["default"] = ""; // GMS stuff???
     let savFileContent = JSON.stringify(fileList);
-    var savFile = new Blob([savFileContent], {type: "application/json;charset=utf-8"});
+    var savFile = new Blob([savFileContent + "\0" /*idk*/], {type: "application/json;charset=utf-8"});
     saveAs(savFile, "undertale.sav");
 }
 async function onRawToJSONSubmit() {
